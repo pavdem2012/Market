@@ -2,7 +2,7 @@ package com.pavdem2012.market;
 
 public class Product {
     String name; 
-    private double weight = 0;
+    private int weight = 0;
     int category;
     int price;
     
@@ -12,20 +12,30 @@ public class Product {
         this.category = category;
         this.price = price;
     }
+    
     public void addWeight(int additinalWight) {
         weight += additinalWight;
     }
-
+    
     public double getWeight() {
         return weight;
     }
-    public void getPrice(int additinalPrice) {
+    
+    public void addPrice(int additinalPrice) {
         price += additinalPrice;
     }
 
+    public double getCost() {
+        return weight*price;
+    }
+    
     @Override
     public String toString() {
-        return "Product [name=" + name + ", weight=" + weight + ", category=" + category + ", price=" + price + "]";
+        return "Product [name=" + name 
+                + ", weight=" + weight 
+                + ", category=" + category 
+                + ", price=" + price
+                + ", cost=" + getCost() + "]";
     }
 
     @Override
