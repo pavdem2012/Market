@@ -7,6 +7,14 @@ public class Basket {
         Product mac = new Product("MacBook", 1200, 1, 2000);
         Product android = new Product("HTC", 250, 2, 100);
 
+        apple.getPrice(100);
+        mac.getPrice(200);
+        android.getPrice(130);
+        
+        apple.addWeight(300);
+        mac.addWeight(125);
+        android.addWeight(200);
+        
         System.out.println(apple);
         System.out.println(mac);
         System.out.println(android);

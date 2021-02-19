@@ -15,19 +15,17 @@ public class Product {
     public void addWeight(int additinalWight) {
         weight += additinalWight;
     }
-    
-    
+
     public double getWeight() {
         return weight;
     }
-    public void setWeight(double weight) {
-        this.weight = weight;
+    public void getPrice(int additinalPrice) {
+        price += additinalPrice;
     }
+
     @Override
     public String toString() {
-        return "Product [Наименование:=" + name + ", Вес:=" + weight + ", "
-                + "Категория:=" + category + ", Цена:=" + price + ", "
-                + "Стоимость: = " + weight * price + "]";
+        return "Product [name=" + name + ", weight=" + weight + ", category=" + category + ", price=" + price + "]";
     }
 
     @Override
@@ -64,6 +62,5 @@ public class Product {
         if (Double.doubleToLongBits(weight) != Double.doubleToLongBits(other.weight))
             return false;
         return true;
-    }
-    
+    }    
 }
