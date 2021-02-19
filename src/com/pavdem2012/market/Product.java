@@ -14,6 +14,6 @@ public class Product {
     }
     @Override
     public String toString() {
-        return "Product [наименование:=" + name + ", вес:=" + weight + ", категория:=" + category + ", цена:=" + price + ", Стоимость: = " + weight * price + "]";
+        return "Product [РќР°РёРјРµРЅРѕРІР°РЅРёРµ:=" + name + ", Р’РµСЃ:=" + weight + ", РљР°С‚РµРіРѕСЂРёСЏ:=" + category + ", Р¦РµРЅР°:=" + price + ", РЎС‚РѕРёРјРѕСЃС‚СЊ: = " + weight * price + "]";
     }
 }
