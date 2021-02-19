@@ -2,7 +2,7 @@ package com.pavdem2012.market;
 
 public class Product {
     String name; 
-    int weight;
+    private double weight = 0;
     int category;
     int price;
     
@@ -12,7 +12,17 @@ public class Product {
         this.category = category;
         this.price = price;
     }
-
+    public void addWeight(int additinalWight) {
+        weight += additinalWight;
+    }
+    
+    
+    public double getWeight() {
+        return weight;
+    }
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
     @Override
     public String toString() {
         return "Product [Наименование:=" + name + ", Вес:=" + weight + ", "
@@ -27,7 +37,9 @@ public class Product {
         result = prime * result + category;
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         result = prime * result + price;
-        result = prime * result + weight;
+        long temp;
+        temp = Double.doubleToLongBits(weight);
+        result = prime * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
 
@@ -49,7 +61,7 @@ public class Product {
             return false;
         if (price != other.price)
             return false;
-        if (weight != other.weight)
+        if (Double.doubleToLongBits(weight) != Double.doubleToLongBits(other.weight))
             return false;
         return true;
     }
