@@ -12,8 +12,11 @@ public class Product {
         this.category = category;
         this.price = price;
     }
+
     @Override
     public String toString() {
-        return "Product [Наименование:=" + name + ", Вес:=" + weight + ", Категория:=" + category + ", Цена:=" + price + ", Стоимость: = " + weight * price + "]";
+        return "Product [Наименование:=" + name + ", Вес:=" + weight + ", "
+                + "Категория:=" + category + ", Цена:=" + price + ", "
+                + "Стоимость: = " + weight * price + "]";
     }
 }
