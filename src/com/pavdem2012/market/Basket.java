@@ -10,5 +10,9 @@ public class Basket {
         System.out.println(apple);
         System.out.println(mac);
         System.out.println(android);
+        
+        System.out.println(apple.equals(mac));
+        System.out.println(mac.equals(android));
+        System.out.println(apple.equals(android));
     }
 }
