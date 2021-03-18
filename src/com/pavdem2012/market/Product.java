@@ -1,40 +1,37 @@
 package com.pavdem2012.market;
 
 public class Product {
-    String name; 
+    String name;
     private int weight = 0;
     int category;
     int price;
-    
+
     public Product(String name, int weight, int category, int price) {
         this.name = name;
         this.weight = weight;
         this.category = category;
         this.price = price;
     }
-    
+
     public void addWeight(int additinalWight) {
         weight += additinalWight;
     }
-    
+
     public double getWeight() {
         return weight;
     }
-    
+
     public void addPrice(int additinalPrice) {
         price += additinalPrice;
     }
 
     public double getCost() {
-        return weight*price;
+        return weight * price;
     }
-    
+
     @Override
     public String toString() {
-        return "Product [name=" + name 
-                + ", weight=" + weight 
-                + ", category=" + category 
-                + ", price=" + price
+        return "Product [name=" + name + ", weight=" + weight + ", category=" + category + ", price=" + price
                 + ", cost=" + getCost() + "]";
     }
 
@@ -72,5 +69,5 @@ public class Product {
         if (Double.doubleToLongBits(weight) != Double.doubleToLongBits(other.weight))
             return false;
         return true;
-    }    
+    }
 }
